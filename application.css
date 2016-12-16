@@ -1,0 +1,82 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+.borderPane
+{
+	-fx-background-color: grey ;
+	
+}
+.stackPane
+{
+	-fx-background-color: darkgray ;
+	
+}
+.topLabel
+{
+	
+	-fx-text-fill: lightgreen ;
+	
+}
+
+.startEndLabel
+{
+		-fx-text-fill: red;
+	 -fx-background-color:blue;
+	 -fx-alignment: center;
+	 -fx-pref-height: 30px;
+	 -fx-pref-width: 30px;
+	 
+	
+}
+
+
+.wallLabel
+{
+	-fx-background-color:grey;	
+	 -fx-pref-height: 30px;
+	 -fx-pref-width: 30px;
+}
+.raceLabel
+{
+	
+	-fx-background-color: black;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 30px;
+}
+
+.wallLabel2
+{
+	
+	-fx-background-color: grey;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 30px;
+}
+.raceLabel2
+{
+	
+	-fx-background-color: black;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 30px;
+}
+
+.foolLabel
+{
+	
+	-fx-background-color: green;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 30px;
+}
+.bullLabel
+{
+	-fx-background-color: red;
+	-fx-pref-height: 30px;
+	-fx-pref-width: 30px;
+	
+}
+.hbox
+{
+	-fx-background-color: white;	
+	
+}
+.runButton
+{
+	
+}
