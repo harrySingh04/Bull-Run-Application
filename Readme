@@ -1,0 +1,23 @@
+Java FX Application-Running of the Bulls
+
+The below two part were mentioned as pat of the assignment by our professor during our Java class.The image file attached for the GUI is also the part of the assignment.The source code for all the classes was designed by me to run the below application mentioned .
+Part 1: Java GUI 
+In ths application we have designed a Java FX UI which represents the map of Pamplona.
+
+Here are the details of the classes which have been designed as part of the application:
+A Coordinate class with an int row, an int column, and a char representing the value of the coordinate.(For examle for Staring as S and for end as E,for wall as W and for street as blank).You can use any value of your own choice while designing. 
+A StreetMap class with a two-dimensional array of Coordinates but no GUI code. 
+A JavaFX GUI class called MazeGUIPane. Since the constructor for Scene takes a Pane as a parameter, this class should extend one of the Pane classes, most likely BorderPane. It should also contain a GridPane with a two-dimensional grid of Labels. One label in the GridPane corresponds to one Coordinate in the StreetMap. Note this important distinction: the MazeGUIPane is for the the user interface while the StreetMap is for data. 
+The outer edges of the grid should consist of walls, except for one starting square and one exit square. When the game starts, squares that are not on the edges should be randomly set to wall and space squares (use about 20% walls.) Note that this does not guarantee that it is possible to escape the bulls . Also, you may want to make sure that the few squares nearest the start square are all empty space rather than assigning them random values. 
+
+Clicking on a label that is not on the edge of the board toggles the label between wall and empty space. The event handling code must update the StreetMap when the squares toggle. It must also change the css class of the Label in order to change its appearance. 
+
+Part 2: Make The Game Work
+
+In our version of the Running of the Bulls, one fool runs through Pamplona trying to avoid some number of bulls. If the fool makes it to the exit square without being gored, he wins; if a bull catches him first, he loses. When one of these events occurs, a message should appear next to the Run button. 
+The fool's movement must be controlled by the four scroll keys (use an event handler that handles a KeyEvent and find the key strokes using the the KeyCode enum). Make sure he cannot move through walls. Use a Coordinate variable to track the fool's location. I did not use a Fool class, but you may use one if you like. 
+You will need a Bull class. Among other things, it will contain a method to determine the bull's next step. If a bull can see the fool, he moves towards him. If a bull cannot see the fool, he moves toward the fool's last known location if possible, otherwise he moves randomly. Like the fool, the bulls cannot move through walls. 
+The bulls should move faster than the fool. The best way to implement this is for the bulls to take more than one move for each fool move. You can code this by writing a method in StreetMap that calls each bull's move method, and calling the StreetMap method some number of times from inside the fool move event handler (the one that responds to the scroll keys.) Since the bulls move faster, the fool should get a few free moves before the Bulls begin moving. 
+Use css to make it obvious at all times where the bulls and the fool are. 
+Create an event handler for the start button which returns both the fool and the bulls to the starting point. You may also have the button also create a new map. 
+Experiment with the game to make it difficult, but still possible, for the fool to escape unharmed. Design Main so that you can set parameters there for the number of turns in the head start, the number of bulls, and the number of bull moves per fool move. If you want more practice with GUI building, provide a way to set these parameters with user input. 
